@@ -3,7 +3,7 @@ package com.nahid.dagger2.services
 import android.util.Log
 import javax.inject.Inject
 
-private const val TAG = "EmailService"
+private const val TAG = "NahidHasan"
 
 interface NotificationServices {
     fun sendMail(to: String, from: String, body: String)

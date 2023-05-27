@@ -3,7 +3,6 @@ package com.nahid.dagger2
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.nahid.dagger2.component.DaggerUserRegistrationComponent
-import com.nahid.dagger2.services.EmailService
 import com.nahid.dagger2.services.UserRegistrationService
 import javax.inject.Inject
 
