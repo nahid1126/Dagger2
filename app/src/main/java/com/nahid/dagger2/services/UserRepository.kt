@@ -18,7 +18,7 @@ class LocalDBRepository @Inject constructor(): UserService {
     }
 }
 
-class FirebaseRepository: UserService {
+class FirebaseRepository(private val retryCount: Int) : UserService {
     override fun saveUser(email: String, pass: String) {
-        Log.d(TAG, "user saved successful in firebase!")    }
+        Log.d(TAG, "user saved successful in firebase! $retryCount")    }
 }

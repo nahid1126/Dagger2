@@ -6,15 +6,17 @@ import com.nahid.dagger2.services.MessageServices
 import com.nahid.dagger2.services.NotificationServices
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 class NotificationModule {
     @MessageQualifier
     @Provides
-    fun getMessageServices(): NotificationServices {
-        return MessageServices()
+    fun getMessageServices(retryCount: Int): NotificationServices {
+        return MessageServices(retryCount)
     }
 
+    @Singleton
     @Provides
     fun getMailServices(emailService: EmailService): NotificationServices {
         return emailService
